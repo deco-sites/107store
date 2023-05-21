@@ -89,10 +89,13 @@
               "deco-sites/107store/sections/Footer.tsx",
               "deco-sites/107store/sections/Header.tsx",
               "deco-sites/107store/sections/Highlights.tsx",
+              "deco-sites/107store/sections/ImageGallery/ImageGallery.tsx",
               "deco-sites/107store/sections/LinkTree.tsx",
+              "deco-sites/107store/sections/Logos/Logos.tsx",
               "deco-sites/107store/sections/ProductDetails.tsx",
               "deco-sites/107store/sections/ProductShelf.tsx",
               "deco-sites/107store/sections/SearchResult.tsx",
+              "deco-sites/107store/sections/Testimonial/Testimonial.tsx",
               "deco-sites/107store/sections/WhatsApp.tsx",
               "deco-sites/107store/sections/WishlistGallery.tsx",
               "deco-sites/std/sections/Analytics.tsx",
@@ -7502,7 +7505,7 @@
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Colors&b966eeb0bbdb3699ee11b12ce6a39cc4": {
+    "ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@98f26e68a94472410634912f93cf35fd&Colors": {
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Colors"
@@ -7518,7 +7521,7 @@
           "required": []
         }
       ],
-      "title": "Colors&b966eeb0bbdb3699ee11b12ce6a39cc4"
+      "title": "98f26e68a94472410634912f93cf35fd&Colors"
     },
     "ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Miscellaneous": {
       "type": "object",
@@ -7621,7 +7624,7 @@
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Colors&b966eeb0bbdb3699ee11b12ce6a39cc4",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@98f26e68a94472410634912f93cf35fd&Colors",
           "title": "Colors"
         },
         "miscellaneous": {
@@ -8247,6 +8250,90 @@
       ],
       "title": "deco-sites/107store/components/ui/Highlights.tsx@Props"
     },
+    "ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9JbWFnZUdhbGxlcnkvSW1hZ2VHYWxsZXJ5LnRzeA==@Banner": {
+      "type": "object",
+      "properties": {
+        "desktop": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "description": "desktop otimized image",
+          "title": "Desktop"
+        },
+        "mobile": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "description": "mobile otimized image",
+          "title": "Mobile"
+        },
+        "alt": {
+          "type": "string",
+          "description": "Image's alt text",
+          "title": "Alt"
+        },
+        "link": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "when user clicks on the image, go to this link",
+          "title": "Link"
+        }
+      },
+      "required": [
+        "desktop",
+        "mobile",
+        "alt"
+      ],
+      "title": "Banner"
+    },
+    "ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9JbWFnZUdhbGxlcnkvSW1hZ2VHYWxsZXJ5LnRzeA==@Banner[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9JbWFnZUdhbGxlcnkvSW1hZ2VHYWxsZXJ5LnRzeA==@Banner"
+      },
+      "title": "Banner[]"
+    },
+    "ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9JbWFnZUdhbGxlcnkvSW1hZ2VHYWxsZXJ5LnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Section text title",
+          "title": "Title"
+        },
+        "subTitle": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Section text subtitle",
+          "title": "Sub Title"
+        },
+        "images": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9JbWFnZUdhbGxlcnkvSW1hZ2VHYWxsZXJ5LnRzeA==@Banner[]",
+          "title": "Images"
+        },
+        "variant": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "normal"
+            },
+            {
+              "type": "string",
+              "const": "fancy-grid"
+            }
+          ],
+          "type": "string",
+          "default": "'normal'",
+          "description": "Images exhibition style",
+          "title": "Variant"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/107store/sections/ImageGallery/ImageGallery.tsx@Props"
+    },
     "ZGVjby1zaXRlcy8xMDdzdG9yZS9jb21wb25lbnRzL3VpL0xpbmtUcmVlLnRzeA==@Link": {
       "type": "object",
       "properties": {
@@ -8343,6 +8430,46 @@
       },
       "required": [],
       "title": "deco-sites/107store/components/ui/LinkTree.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9Mb2dvcy9Mb2dvcy50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "subtitle": {
+          "type": "string",
+          "title": "Subtitle"
+        },
+        "imgUrl": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+                "title": "Url"
+              },
+              "textAlt": {
+                "type": "string",
+                "title": "Text Alt"
+              }
+            },
+            "required": [
+              "url",
+              "textAlt"
+            ]
+          },
+          "title": "Img Url"
+        }
+      },
+      "required": [
+        "title",
+        "subtitle",
+        "imgUrl"
+      ],
+      "title": "deco-sites/107store/sections/Logos/Logos.tsx@Props"
     },
     "ZGVjby1zaXRlcy8xMDdzdG9yZS9jb21wb25lbnRzL3Byb2R1Y3QvUHJvZHVjdERldGFpbHMudHN4@Props": {
       "type": "object",
@@ -8455,6 +8582,61 @@
         "columns"
       ],
       "title": "deco-sites/107store/components/search/SearchResult.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9UZXN0aW1vbmlhbC9UZXN0aW1vbmlhbC50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "subtitle": {
+          "type": "string",
+          "title": "Subtitle"
+        },
+        "testimonials": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "logo": {
+                "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+                "title": "Logo"
+              },
+              "description": {
+                "type": "string",
+                "title": "Description"
+              },
+              "image": {
+                "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+                "title": "Image"
+              },
+              "name": {
+                "type": "string",
+                "title": "Name"
+              },
+              "position": {
+                "type": "string",
+                "title": "Position"
+              }
+            },
+            "required": [
+              "logo",
+              "description",
+              "image",
+              "name",
+              "position"
+            ]
+          },
+          "title": "Testimonials"
+        }
+      },
+      "required": [
+        "title",
+        "subtitle",
+        "testimonials"
+      ],
+      "title": "deco-sites/107store/sections/Testimonial/Testimonial.tsx@Props"
     },
     "ZGVjby1zaXRlcy8xMDdzdG9yZS9jb21wb25lbnRzL3VpL1doYXRzQXBwLnRzeA==@Props": {
       "type": "object",
@@ -8857,7 +9039,11 @@
         },
         "name": {
           "type": "string",
-          "title": "Name"
+          "title": "The audience name (will be used on cookies).",
+          "description": "Add a meaningful short word for the audience name.",
+          "maxLength": 22,
+          "minLength": 3,
+          "pattern": "^[A-Za-z0-9_]+$"
         },
         "routes": {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]",
@@ -8973,7 +9159,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -8991,13 +9177,13 @@
           ]
         }
       ],
-      "title": "95abd76f92dd138f258080286726977e|WorkflowRef"
+      "title": "6fafe0f553db3c0685828404a37be338|WorkflowRef"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef",
           "title": "Workflow"
         },
         "id": {
@@ -10988,6 +11174,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9JbWFnZUdhbGxlcnkvSW1hZ2VHYWxsZXJ5LnRzeA==": {
+      "title": "deco-sites/107store/sections/ImageGallery/ImageGallery.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9JbWFnZUdhbGxlcnkvSW1hZ2VHYWxsZXJ5LnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/107store/sections/ImageGallery/ImageGallery.tsx"
+          ],
+          "default": "deco-sites/107store/sections/ImageGallery/ImageGallery.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9MaW5rVHJlZS50c3g=": {
       "title": "deco-sites/107store/sections/LinkTree.tsx",
       "type": "object",
@@ -11006,6 +11213,27 @@
             "deco-sites/107store/sections/LinkTree.tsx"
           ],
           "default": "deco-sites/107store/sections/LinkTree.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9Mb2dvcy9Mb2dvcy50c3g=": {
+      "title": "deco-sites/107store/sections/Logos/Logos.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9Mb2dvcy9Mb2dvcy50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/107store/sections/Logos/Logos.tsx"
+          ],
+          "default": "deco-sites/107store/sections/Logos/Logos.tsx"
         }
       }
     },
@@ -11069,6 +11297,27 @@
             "deco-sites/107store/sections/SearchResult.tsx"
           ],
           "default": "deco-sites/107store/sections/SearchResult.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9UZXN0aW1vbmlhbC9UZXN0aW1vbmlhbC50c3g=": {
+      "title": "deco-sites/107store/sections/Testimonial/Testimonial.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9UZXN0aW1vbmlhbC9UZXN0aW1vbmlhbC50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/107store/sections/Testimonial/Testimonial.tsx"
+          ],
+          "default": "deco-sites/107store/sections/Testimonial/Testimonial.tsx"
         }
       }
     },
@@ -12266,7 +12515,13 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9IaWdobGlnaHRzLnRzeA=="
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9JbWFnZUdhbGxlcnkvSW1hZ2VHYWxsZXJ5LnRzeA=="
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9MaW5rVHJlZS50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9Mb2dvcy9Mb2dvcy50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9Qcm9kdWN0RGV0YWlscy50c3g="
@@ -12276,6 +12531,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9TZWFyY2hSZXN1bHQudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9UZXN0aW1vbmlhbC9UZXN0aW1vbmlhbC50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy8xMDdzdG9yZS9zZWN0aW9ucy9XaGF0c0FwcC50c3g="
