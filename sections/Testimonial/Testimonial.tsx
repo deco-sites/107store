@@ -35,7 +35,7 @@ export default function Testimonials({
               <div className="flex flex-col items-center">
                 <div className="avatar">
                   <div className="w-16 rounded-xl">
-                    <img src={testimonial.logo} />
+                    <img src={testimonial.logo} alt={testimonial.name} />
                   </div>
                 </div>
               </div>
@@ -47,7 +47,7 @@ export default function Testimonials({
               <div className="flex flex-col items-center">
                 <div className="avatar">
                   <div className="w-12 rounded-xl">
-                    <img src={testimonial.image} />
+                    <img src={testimonial.image} alt={testimonial.name} />
                   </div>
                 </div>
                 <div className="text-center">
